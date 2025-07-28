@@ -16,6 +16,7 @@ export default function Navbar() {
 
       if (window.innerWidth > 768) {
         document.body.style.overflow = "unset";
+        setMenuOpen(false);
       }
     };
 
