@@ -55,6 +55,7 @@ function Hero() {
               autoPlay
               loop
               muted
+              playsInline
             />
           </div>
         </div>
