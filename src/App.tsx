@@ -10,13 +10,13 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 
 function App() {
   return (
-    <>
+    <div className="max-w-700 mx-auto ">
       <Navbar />
       <Hero />
       <Partners />
       <Services />
       <Footer />
-    </>
+    </div>
   );
 }
 
