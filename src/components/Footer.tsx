@@ -20,8 +20,8 @@ export const Footer = () => {
             Services
           </h4>
           <ul className="flex flex-col gap-2 ">
-            {serviceItems.map((item) => (
-              <li className="cursor-pointer w-20 hover:text-zinc-800">
+            {serviceItems.map((item, i) => (
+              <li key={i} className="cursor-pointer w-20 hover:text-zinc-800">
                 {item}
               </li>
             ))}
@@ -33,8 +33,8 @@ export const Footer = () => {
             About
           </h4>
           <ul className="flex flex-col gap-2">
-            {aboutItems.map((item) => (
-              <li className="cursor-pointer w-20 hover:text-zinc-800">
+            {aboutItems.map((item, i) => (
+              <li key={i} className="cursor-pointer w-20 hover:text-zinc-800">
                 {item}
               </li>
             ))}
@@ -46,8 +46,8 @@ export const Footer = () => {
             Resources
           </h4>
           <ul className="flex flex-col gap-2">
-            {resourceItems.map((item) => (
-              <li className="cursor-pointer w-20 hover:text-zinc-800">
+            {resourceItems.map((item, i) => (
+              <li key={i} className="cursor-pointer w-20 hover:text-zinc-800">
                 {item}
               </li>
             ))}
