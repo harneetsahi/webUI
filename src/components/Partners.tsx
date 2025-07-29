@@ -76,7 +76,7 @@ export default function Partners() {
           <InfiniteMovingCards
             items={partners}
             direction="right"
-            speed="slow"
+            speed="normal"
           />
         </div>
       </div>
