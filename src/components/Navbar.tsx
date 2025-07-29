@@ -30,12 +30,14 @@ export default function Navbar() {
   }, [menuOpen]);
 
   return (
-    <nav className="w-screen flex justify-between items-center py-4 absolute z-10 text-zinc-800 pt-12 lg:px-20 md:px-15 px-10 ">
+    <nav className="w-screen flex justify-between items-center py-4 absolute z-10 text-zinc-800 pt-12 lg:px-20 md:px-15 px-10  max-w-700">
       <Cctv size={30} strokeWidth={1.5} />
       <div className="border-1 border-zinc-800 cursor-pointer justify-self-end  rounded-full py-2 px-8 hidden md:block   ">
         <ul className="flex gap-6 ">
-          {navItems.map((item) => (
-            <li className="cursor-pointer">{item}</li>
+          {navItems.map((item, i) => (
+            <li key={i} className="cursor-pointer">
+              {item}
+            </li>
           ))}
         </ul>
       </div>
@@ -59,8 +61,8 @@ export default function Navbar() {
       {menuOpen && (
         <div className="md:hidden block absolute bg-zinc-900 min-h-screen rounded-lg w-screen left-0 top-0 overflow-y-hidden">
           <ul className="px-10 pt-30 flex flex-col gap-13">
-            {navItems.map((item) => (
-              <a href="/">
+            {navItems.map((item, i) => (
+              <a href="/" key={i}>
                 <li className="cursor-pointer text-zinc-300 font-bold sm:text-5xl text-4xl hover:text-zinc-50 hover:pl-4 hover:border-l-2 rounded-md transition-all  ">
                   {item}
                 </li>
