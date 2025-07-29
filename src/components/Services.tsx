@@ -14,7 +14,6 @@ export const Services = () => {
         trigger: "#serviceContainer",
         start: "top center",
         end: "bottom center",
-        markers: true,
       },
     });
 

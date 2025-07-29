@@ -20,7 +20,6 @@ export default function Partners() {
         trigger: "#partnerContainer",
         start: "top center  ",
         end: "bottom center",
-        markers: true,
       },
     });
 
