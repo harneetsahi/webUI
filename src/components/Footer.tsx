@@ -2,7 +2,7 @@ import { Cctv, Facebook, Linkedin, Twitter } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <div className="bg-[#ffffff] rounded-t-3xl mx-8 flex md:flex-row flex-col justify-between gap-3 md:p-10 p-7 mt-35 text-xs text-zinc-500 ">
+    <div className="bg-[#ffffff] rounded-t-3xl md:mx-8 mx-5 flex md:flex-row flex-col justify-between gap-3 md:p-10 p-7 mt-35 text-xs text-zinc-500 ">
       <div className=" md:flex-col gap-15 justify-between hidden md:flex">
         <div>
           <Cctv size={40} strokeWidth={1.5} color="#25272b" />
