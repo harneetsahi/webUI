@@ -9,19 +9,30 @@ function Hero() {
       type: "lines",
       mask: "words",
     });
+    const title = SplitText.create("#heroTitle", {
+      type: "lines",
+      mask: "words",
+    });
 
     const tl = gsap.timeline();
 
-    tl.from("#heroTitle", {
-      opacity: 0,
-      xPercent: 0,
-      ease: "power1.inOut",
-    }).from(description.lines, {
+    tl.from(title.lines, {
       opacity: 0,
       yPercent: 100,
       ease: "power1.inOut",
-      stagger: 0.03,
-    });
+    })
+      .from("#heroContact", {
+        opacity: 0,
+        yPercent: 100,
+        ease: "power1.inOut",
+        stagger: 0.03,
+      })
+      .from(description.lines, {
+        opacity: 0,
+        yPercent: 100,
+        ease: "power1.inOut",
+        stagger: 0.03,
+      });
   });
 
   return (
@@ -37,7 +48,10 @@ function Hero() {
             </h1>
 
             <div className="sm:w-80 w-fit mt-13  ">
-              <div className="flex gap-3 border-1 border-t-0 border-l-0 border-r-0 border-b-zinc-900 pb-4 cursor-pointer ">
+              <div
+                className="flex gap-3 border-1 border-t-0 border-l-0 border-r-0 border-b-zinc-900 pb-4 cursor-pointer"
+                id="heroContact"
+              >
                 <CircleChevronRight fill="black" color="white" size={24} />
                 <p className="font-medium">Contact us</p>
               </div>
